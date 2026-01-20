@@ -1,0 +1,3 @@
+@echo off
+echo 自動Git保存を開始します...
+powershell.exe -WindowStyle Hidden -File "%~dp0auto-commit.ps1"

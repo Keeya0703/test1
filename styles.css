@@ -427,12 +427,115 @@ body {
     gap: 10px;
 }
 
+/* 申し送りノートのスタイル */
+.handover-notes-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.handover-notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.handover-note-card {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #e67e22;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.handover-note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.handover-note-header h3 {
+    color: #2c3e50;
+    font-size: 20px;
+    margin: 0;
+}
+
+.handover-note-content {
+    margin-top: 15px;
+}
+
+.note-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #2c3e50;
+}
+
+.note-references {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #dee2e6;
+}
+
+.note-references h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.note-references ul {
+    list-style: none;
+    padding: 0;
+}
+
+.note-references li {
+    padding: 10px;
+    margin: 8px 0;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #495057;
+}
+
+.anomalies-alert {
+    background-color: #fff3cd;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 15px 0;
+    border-left: 4px solid #ffc107;
+}
+
+.anomalies-alert h4 {
+    margin-bottom: 10px;
+    color: #856404;
+    font-size: 16px;
+}
+
+.anomalies-alert ul {
+    margin-left: 20px;
+    color: #856404;
+}
+
+.anomalies-alert li {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
 /* 記録タイプ選択ボタン */
 .record-type-buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .record-type-buttons {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .record-type-btn {
@@ -675,9 +778,23 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
     
+    .record-type-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
     .record-type-btn,
     .option-btn {
         padding: 10px;
         font-size: 14px;
+    }
+    
+    .handover-note-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .handover-note-header h3 {
+        font-size: 18px;
     }
 }
